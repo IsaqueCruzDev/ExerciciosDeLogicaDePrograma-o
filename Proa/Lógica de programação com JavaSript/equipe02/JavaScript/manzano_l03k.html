@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Elaborar  um  programa  que  possibilite  calcular  a área  total  de  uma  residência  (sala,  cozinha, banheiro, quartos, área de serviço, quintal, garagem, etc.). O programa deve solicitar a entrada do nome, a largura e o comprimento de um determinado cômodo. Em seguida, deve apresentar a área do  cômodo  lido  e  também  uma  mensagem  solicitando  do  usuário  a  confirmação  de  continuar calculando  novos  cômodos.  Caso  o  usuário  responda  “NAO”,  o  programa  deve  apresentar  o  valor total acumulado da área residencial.  -->
+    <button type="button" onclick="executaFuncao()">Clique em mim</button>
+    <script>
+      function executaFuncao() {
+        let contador = 0;
+        let contadorNovoComodo = 1;
+        let area = 0;
+        let areaTotal = 0;
+
+        while (contador < contadorNovoComodo) {
+          contador = contador + 1;
+          console.log(`Contagem ${contador}`);
+
+          let comodo = prompt("Qual é o cômodo:");
+          let comprimento = prompt(`Qual o comprimento do(a) ${comodo}`);
+          let largura = prompt(`Qual a largura do(a) ${comodo}`);
+
+          area = comprimento * largura;
+          alert(`A area do(a) ${comodo} é de ${area}`);
+          console.log(area);
+          areaTotal = areaTotal + area;
+
+          let pergunta = prompt("Deseja inserir um novo cômodo? Sim ou Não?");
+          if (pergunta === "sim" || pergunta === "SIM" || pergunta === "ss" || pergunta === "s") {
+            contadorNovoComodo = contadorNovoComodo + 1;
+          } else {
+            alert(`A area total da casa é de: ${areaTotal}`);
+            console.log(`A area total da casa é de: ${areaTotal}`);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

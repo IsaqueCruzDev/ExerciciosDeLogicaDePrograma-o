@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias. -->
+    <script>
+        let idadeAno = prompt("Digite sua idade em anos: ");
+        idadeAno = parseInt(idadeAno);
+        let idadeMes = prompt("Digite quantos meses se passaram desde o seu último aniversário: ");
+        idadeAno = parseInt(idadeMes);
+        let idadeDias = prompt("Digite quants dias se passaram desde o seu último mêsversário: ");
+        idadeAno = parseInt(idadeDias);
+        let diasVividos = idadeAno * 365 + idadeMes * 30 + idadeDias;
+        alert(`Você possui ${diasVividos} anos.`);
+
+    </script>
+</body>
+</html>

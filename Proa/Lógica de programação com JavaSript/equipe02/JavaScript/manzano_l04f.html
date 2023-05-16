@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Elaborar  um  programa  que  efetue  a  leitura  sucessiva  de  valores  numéricos  e  apresente  no  final  o total do somatório, a média aritmética e o total de valores lidos. O programa deve fazer as leituras dos  valores  enquanto  o  usuário  estiver  fornecendo  valores  positivos.  Ou  seja,  o  programa  deve parar  quando  o  usuário  fornecer  um  valor  negativo. Não  se  esqueça  que  o  usuário  pode  entrar como primeiro número um número negativo, portanto, cuidado com a divisão por zero no cálculo da média.  -->
+    <button type="button" onclick="executaFuncao()">Clique em mim</button>
+    <script>
+        function executaFuncao() {
+            let contador = 1;
+            let contadorNovoNumero = 1;
+            let soma = 0;
+            let media = 0;
+            do {
+            let novoNumero = parseInt(prompt("Digite o valor:"));
+                soma = soma + novoNumero;
+                media = soma / contador;
+                let desejaNovoNumero = prompt('Deseja inserir um novo numero?');
+
+                if (desejaNovoNumero === 'Sim' || desejaNovoNumero === 'SIM' || desejaNovoNumero === 'S' || desejaNovoNumero === 's' || desejaNovoNumero === 'ss' || desejaNovoNumero === 'sim') {
+                contadorNovoNumero = contadorNovoNumero + 1;
+                } 
+                
+                else {
+                    console.log(`A soma total foi de : ${soma}`);
+                    console.log(`A media foi de : ${media}`);
+                }
+                contador = contador + 1;
+            } while (contador <= contadorNovoNumero);
+        }
+    </script>
+</body>
+</html>

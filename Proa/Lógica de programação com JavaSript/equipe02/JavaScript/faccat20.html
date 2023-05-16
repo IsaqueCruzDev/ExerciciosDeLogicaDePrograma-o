@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ler dois valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente. -->
+
+    <script>
+        let valor1 = prompt("Digite o primeiro valor: ");
+        valor1 = Number(valor1);
+        console.log(valor1);
+
+        let valor2 = prompt("Digite o segundo valor: ");
+        valor2 = Number(valor2);
+        console.log(valor2);
+
+        if (valor1 > valor2) {
+            console.log(valor2, valor1);
+            alert(`${valor2} ${valor1}`);
+        } else {
+            console.log(valor1, valor2);
+            alert(`${valor1} ${valor2}`);
+        }
+    </script>
+</body>
+</html>

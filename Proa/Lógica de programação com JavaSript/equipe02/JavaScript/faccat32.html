@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ler o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE.  -->
+    <button type="button" onclick="time()">Clique aqui</button>
+    <script>
+        function time() {
+        let time1 = prompt("Escreva o nome do primeiro time:");
+        let time2 = prompt("Escreva o nome do segundo time:");
+        let golsTime1 = parseInt(prompt("Digite quantos gols o primeiro time fez:"));
+        let golsTime2 = parseInt(prompt("Digite quantos gols o segundo time fez:"));
+
+        if (golsTime1 > golsTime2) {
+             alert(`${time1}: ${golsTime1} X ${time2}: ${golsTime2}, o vencedor foi ${time1}.`);
+        } else if (golsTime1 === golsTime2)  {
+            alert(`Empate!`);
+        } else {
+            alert(`${time2}: ${golsTime2} X ${time1}: ${golsTime1} , o vencedor foi ${time2}.`);
+        }
+        }
+    </script>
+</body>
+</html>

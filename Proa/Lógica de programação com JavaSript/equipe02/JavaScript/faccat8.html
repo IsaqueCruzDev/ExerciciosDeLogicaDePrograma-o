@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Escreva  um  algoritmo  para  ler  o  número  total  de  eleitores  de um  município,  o  número  de  votos brancos, nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao total de eleitores.  -->
+    <script>
+    let totalEleitores = prompt("Digite o número total de eleitores: ");
+    totalEleitores = parseFloat(totalEleitores);
+    console.log("Quantidade total de eleitores: ", totalEleitores);
+
+    let votosBrancos = prompt("Digite a quantidade de votos Brancos: ");
+    votosBrancos = parseFloat(votosBrancos);
+    console.log("Quantidade de votos brancos: ", votosBrancos);
+
+    let votosNulos = prompt("Digite a quantidade de votos Nulos: ");
+    votosNulos = parseFloat(votosNulos);
+    console.log("Quantidade de votos nulos: ", votosNulos);
+
+    let votosValidos = prompt("Escreva o total de votos Válidos: ");
+    votosValidos = parseFloat(votosValidos);
+    console.log("Quantidade de votos válidos: ", votosValidos);
+    
+    let porcentVotosBrancos = votosBrancos / 100;
+    porcentVotosBrancos = parseFloat(porcentVotosBrancos);
+
+    let porcentVotosNulos = votosNulos / 100;
+    porcentVotosBrancos = parseFloat(porcentVotosBrancos);
+
+    let porcentVotosValidos = votosValidos / 100;
+    porcentVotosBrancos = parseFloat(porcentVotosBrancos);
+
+    console.log("Porcentagem de votos brancos: ", porcentVotosBrancos);
+    console.log("Porcentagem de votos nulos: ",porcentVotosNulos);
+    console.log("Porcentagem de votos válidos: ",porcentVotosValidos);
+
+    alert(`O total de eleitores foi: ${totalEleitores}, ${100 * porcentVotosBrancos}% votaram em branco. ${100 * porcentVotosNulos}% votaram nulo, e ${100 * porcentVotosValidos}% foram válidos`);
+
+    </script>
+</body>
+</html>

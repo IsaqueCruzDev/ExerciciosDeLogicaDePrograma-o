@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ler dois valores e imprimir uma das três mensagens a seguir: ‘Números iguais’, caso os números sejam iguais ‘Primeiro é maior’, caso o primeiro seja maior que o segundo; ‘Segundo maior’, caso o segundo seja maior que o primeiro.  -->
+
+    <button type="button" onclick="valorDiferenteOuIgual()">Clique aqui</button>
+    <script>
+        function valorDiferenteOuIgual() {
+            let valor1 = parseInt(prompt("Digite o primeiro valor"));
+            let valor2 = parseInt(prompt("Digite o segundo valor"));
+
+            if (valor1 === valor2)  {
+                alert("Números iguais.");
+            } else if (valor1 > valor2) {
+                alert("Primeiro valor é maior.");
+            } else {
+                alert("Segundo valor é maior.");
+            }
+        }
+    </script>
+</body>
+</html>

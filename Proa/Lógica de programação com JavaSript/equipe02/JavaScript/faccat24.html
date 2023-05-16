@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ler o salário fixo e o valor das vendas efetuadas pelo vendedor de uma empresa. Sabendo-se que ele  recebe  uma  comissão  de  3%  sobre  o  total  das  vendas  até  R$  1.500,00  mais  5%  sobre  o  que ultrapassar este valor, calcular e escrever o seu salário total.  -->
+    <button type="button" onclick="calculaSalario()">Clique aqui</button>
+    <script>
+        function calculaSalario() {
+            let salarioFixo = parseFloat(prompt("Digite o valor do salário fixo:"));
+            let valorVendas = parseFloat(prompt("Digite o valor das vendas:"));
+            let vendasExtras;
+            let salarioTotal;
+            let comissao;
+            let comissaoExtra;
+             
+            if (valorVendas > 1500) {
+                vendasExtras = valorVendas - 1500;
+                comissao = valorVendas * (3/100);
+                comissaoExtra = vendasExtras * (5/100) + vendasExtras * (3/100);
+                salarioTotal = salarioFixo + comissao + comissaoExtra;
+                alert(`O salário total é de : ${salarioTotal}`);
+            } else {
+                comissao = valorVendas * (3/100);
+                salarioTotal = salarioFixo + comissao;
+                alert(`O salário total é de : ${salarioTotal}`);
+            }
+        }
+    </script>
+</body>
+</html>

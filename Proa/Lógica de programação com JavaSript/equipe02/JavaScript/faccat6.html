@@ -1,0 +1,25 @@
+<!-- cntrl + k cntrl + s -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  Escreva  um  algoritmo  para  ler  as  dimensões  de  um  retângulo  (base  e  altura),  calcular  e  escrever  a área do retângulo. -->
+    <script>
+        let base = prompt('Digite o valor da base: ');
+        base = parseInt(base);
+        let altura = prompt('Digite o valor da altura: ');
+        altura = parseInt(altura);
+
+        function calculaArea(base,altura) {
+        let resultado = base * altura;
+            return resultado;
+        }
+        alert(`A área do retângulo é igual a: ${calculaArea(base, altura)}`);
+    </script>
+</body>
+</html> 

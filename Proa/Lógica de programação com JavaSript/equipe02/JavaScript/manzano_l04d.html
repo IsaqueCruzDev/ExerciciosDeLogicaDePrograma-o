@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Elaborar um programa que efetue o cálculo e no final apresente o somatório do número de grãos de trigo que se pode obter num tabuleiro de xadrez, obedecendo à seguinte regra: colocar um grão de trigo no primeiro quadro e nos quadros seguintes o dobro do quadro anterior. Ou seja, no primeiro quadro coloca-se 1 grão, no segundo quadro colocam-se 2 grãos (neste momento têm-se 3 grãos), no  terceiro  quadro  colocam-se  4  grãos  (tendo  neste momento  7  grãos),  no  quarto  colocam-se  8 grãos  (tendo-se  então  15  grãos)  até  atingir  o  sexagésimo  quarto  (64o)  quadro.  Utilize  variáveis  do tipo real como acumuladores.  -->
+    <button type="button" onclick="executaFuncao()">Clique em mim</button>
+    <script>
+        function executaFuncao() {
+            let contador = 1;
+            contador = parseFloat(contador);
+            let atual = 0;
+            let resultado = 1.00;
+            let soma = 0;
+
+            let cont1 = 0;
+            let resultCont = 1;
+            do {
+                console.log(`No quadro ${contador}, grãos atuais: ${resultado}, soma: ${soma}`);
+                atual = resultado;
+                resultado = atual * 2 + 1;
+                soma = soma + resultado;
+
+                // cont1 = resultado;
+                // resultCont = atual * 2;  
+
+                contador = contador + 1;
+            } while (resultado <= 64)
+        }
+        // console.log(resultCont);
+        //         cont1 = resultado;
+        //         resultCont = atual * 2;  
+    </script>
+</body>
+</html>

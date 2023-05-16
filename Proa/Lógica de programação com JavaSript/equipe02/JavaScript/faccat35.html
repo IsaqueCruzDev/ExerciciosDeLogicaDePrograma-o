@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Um posto está vendendo combustíveis com a seguinte tabela de descontos:  
+
+        Álcool: até 20 litros, desconto de 3% por litro / acima de 20 litros, desconto de 5% por litro 
+        Gasolina: até 20 litros, desconto de 4% por litro  / acima de 20 litros, desconto de 6% por litro
+
+        Escreva  um  algoritmo  que  leia  o  número  de  litros  vendidos  e  o  tipo  de  combustível (codificado  da seguinte  forma: A-álcool, G-gasolina),  calcule  e  imprima  o  valor  a  ser  pago  pelo  cliente  sabendo-se que o preço do litro da gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90. 
+    -->
+    <button type="button" onclick="alcoolOuGasolina()">Clique aqui</button>
+    <script>
+        function alcoolOuGasolina() {
+            let tipoCombustivel = prompt("Seu combustível será Gasolina ou Álcool?");
+            let quantidadeCombustivel = parseInt(prompt("Quantos litros de combustível deseja?"));
+            const precoAlcool = 2.90;
+            const precoGasolina = 3.30;
+            let valorGasolina = quantidadeCombustivel * precoGasolina;
+            let valorAlcool = quantidadeCombustivel * precoAlcool;
+            let total;
+            if (tipoCombustivel === 'Alcool' || tipoCombustivel === 'a' || tipoCombustivel === 'A' && quantidadeCombustivel <= 20) {
+                total = valorAlcool - (valorAlcool * 3/100);
+                alert(total.toFixed(2));
+            } else if (tipoCombustivel === 'Alcool' || tipoCombustivel === 'a' || tipoCombustivel === 'A' && quantidadeCombustivel > 20) {
+                total = valorAlcool - (valorAlcool * 5/100);
+                alert(total.toFixed(2));
+            } else if (tipoCombustivel === 'Gasolina' || tipoCombustivel === 'G' || tipoCombustivel === 'g' && quantidadeCombustivel <= 20) {
+                total = valorAlcool - (valorAlcool * 4/100);
+                alert(total.toFixed(2));
+            } else if (tipoCombustivel === 'Gasolina' || tipoCombustivel === 'G' || tipoCombustivel === 'g' && quantidadeCombustivel > 20) {
+                total = valorAlcool - (valorAlcool * 6/100);
+                alert(total.toFixed(2));
+            }     
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  Ler  o  ano  atual  e  o  ano  de  nascimento  de  uma  pessoa.  Escrever  uma mensagem  que  diga  se  ela poderá ou não votar este ano (não é necessário considerar o mês em que a pessoa nasceu). -->
+
+    <script>
+        let anoAtual = prompt("Digite o ano atual: ");
+        anoAtual = parseInt(anoAtual);
+        console.log(anoAtual);
+
+        let anoNascimento = prompt("Digite o ano de nascimento: ");
+        anoNascimento = parseInt(anoNascimento);
+        console.log(anoNascimento);
+        let idade = anoAtual - anoNascimento;
+
+        if (idade >=16) {
+            alert('Pode votar.');
+        } else {
+            alert('Não pode votar.');
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ler a hora de início e a hora de fim de um jogo de Xadrez (considere apenas horas inteiras, sem os minutos) e calcule a duração do jogo em horas, sabendo-se que o tempo máximo de duração do jogo é de 24 horas e que o jogo pode iniciar em um dia e terminar no dia seguinte. -->
+
+    <script>
+        let horaInicio = prompt('Digite a hora em que o jogo começou: ');
+        horaInicio = parseInt(horaInicio);
+        console.log(horaInicio);
+
+        let horaTermino = prompt('Digite a hora em que o jogo acabou');
+        horaTermino = parseInt(horaTermino);
+        console.log(horaTermino);
+
+        let duracao;
+        duracao = parseInt(duracao);
+
+        if (horaInicio > 23) {
+            alert(`A hora de início do jogo está errada.`);
+        } else if (horaTermino > 23) {
+            alert(`A hora de termino do jogo está errada.`);
+        } else if (horaInicio === horaTermino) {
+            alert(`O jogo teve a duração de 24 horas.`);
+        } else if (horaInicio > horaTermino) {
+            horaInicio = 24 - horaInicio;
+            duracao = horaInicio + horaTermino;
+            alert(`A duração do jogo foi de ${duracao} hora(s).`);
+        } else {
+            duracao = horaTermino - horaInicio;
+            alert(`A duração do jogo foi de ${duracao} hora(s).`);
+        }
+    </script>
+</body>
+</html>

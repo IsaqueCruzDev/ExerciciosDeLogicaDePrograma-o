@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Ler  3  valores (considere  que  não  serão  informados  valores  iguais) e  escrever  a  soma  dos  2 maiores.  -->
+    <button type="button" onclick="somaMaior()">Clique aqui</button>
+    <script>
+      function somaMaior() {
+        let valor1 = parseInt(prompt("Digite um valor:"));
+        let valor2 = parseInt(prompt("Digite o segundo valor:"));
+        let valor3 = parseInt(prompt("Digite o terceiro valor:"));
+        let soma;
+        if (valor1 > valor2 && valor1 > valor3 && valor2 > valor3) {
+          soma = valor1 + valor2;
+          alert(`A soma dos maiores valores é: ${soma}`);
+        } 
+
+        else if (valor1 > valor2 && valor1 > valor3 && valor3 > valor2) {
+          soma = valor1 + valor3;
+          alert(`A soma dos maiores valores é: ${soma}`);
+        } 
+        
+        else if (valor2 > valor1 && valor2 > valor3 && valor1 > valor3) {
+          soma = valor2 + valor1;
+          alert(`A soma dos maiores valores é: ${soma}`);
+        } 
+
+        else if (valor2 > valor1 && valor2 > valor3 && valor3 > valor1) {
+          soma = valor2 + valor3;
+          alert(`A soma dos maiores valores é: ${soma}`);
+        } 
+
+        else if (valor3 > valor1 && valor3 > valor2 && valor2 > valor1) {
+          soma = valor3 + valor2;
+          alert(`A soma dos maiores valores é: ${soma}`);
+        }
+
+        else if (valor3 > valor1 && valor3 > valor2 && valor1 > valor2) {
+          soma = valor3 + valor1;
+          alert(`A soma dos maiores valores é: ${soma}`);
+        }
+      }
+    </script>
+  </body>
+</html>

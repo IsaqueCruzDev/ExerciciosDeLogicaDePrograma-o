@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- O  custo  de  um  carro  novo  ao  consumidor  é  a  soma  do  custo  de  fábrica  com  a  porcentagem  do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja  de  28%  e  os  impostos  de  45%,  escrever  um  algoritmo  para  ler o  custo  de  fábrica  de  um  carro, calcular e escrever o custo final ao consumidor.  -->
+
+    <script>
+        // distribuidor = 28%
+        // impostos = 45%
+        let custoFabrica = prompt("Digite o valor do custo de fábrica: ");
+        custoFabrica = Number(custoFabrica);
+        console.log(custoFabrica);
+
+        let porcentagemDistribuidor = custoFabrica * (28 / 100);
+        let porcentagemImposto = custoFabrica * (45 / 100);
+        let custoCarro = custoFabrica + porcentagemDistribuidor + porcentagemImposto; 
+
+        alert(`O valor do carro novo é de: ${custoCarro}`);
+
+    </script>
+</body>
+</html>

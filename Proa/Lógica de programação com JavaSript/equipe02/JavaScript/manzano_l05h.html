@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Elaborar  um  programa  que  apresente  como  resultado  o  valor  de  uma  potência  de  uma  base qualquer elevada a um expoente qualquer, ou seja, de BE, em que B é o valor da base e E o valor do expoente. Observe que neste exercício não pode ser utilizado o operador de exponenciação do portuguol (^).  -->
+    <button type="button" onclick="executaFuncao()">Clique em mim</button>
+    <script>
+        function executaFuncao() {
+            let base = parseInt(prompt("Digite o valor da base:"));
+            let expoente = parseInt(prompt("Digite o valor do expoente:"));
+            let resultado = 1;
+            for (let contador = 1; contador <= expoente; contador++) {
+                resultado = resultado * base;
+                console.log(`${base} elevado à ${expoente} é igual á: ${resultado}`);
+            }
+        }
+    </script>
+</body>
+</html>

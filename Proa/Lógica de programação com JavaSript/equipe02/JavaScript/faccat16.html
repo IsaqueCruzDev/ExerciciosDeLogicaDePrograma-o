@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- As  maçãs  custam  R$  1,30  cada  se  forem  compradas  menos  de  uma  dúzia, e  R$  1,00  se  forem compradas  pelo  menos  12.  Escreva  um  programa  que  leia  o  número  de  maçãs  compradas,  calcule  e escreva o custo total da compra.  -->
+
+    <script>
+        let macasCompradas = prompt('Digite quantas maçãs foram compradas: ');
+        macasCompradas = Number(macasCompradas);
+        console.log(macasCompradas);
+
+        let valorMaca;
+        valorMaca = parseFloat(valorMaca);
+        let custoTotal;
+        custoTotal = parseFloat(custoTotal);
+
+        if (macasCompradas < 12) {
+            valorMaca = 1.30;
+            console.log(valorMaca);
+            custoTotal = valorMaca * macasCompradas;
+            alert(`O valor total da compra é de: ${custoTotal}`);
+        } else {
+            valorMaca = 1;
+            custoTotal = valorMaca * macasCompradas; 
+            alert(`O valor total da compra é de: ${custoTotal}`);
+        }
+    </script>
+</body>
+</html>

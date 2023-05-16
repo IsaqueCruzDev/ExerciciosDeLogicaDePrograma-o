@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ler  as  notas  da  1a.  e  2a.  avaliações  de  um  aluno.  Calcular  a  média aritmética  simples  e  escrever uma mensagem que diga se o aluno foi ou não aprovado (considerar que nota igual ou maior que 6 o aluno é aprovado). Escrever também a média calculada.  -->
+
+    <script>
+        let nota1 = prompt("Digite a primeira nota: ");
+        nota1 = parseFloat(nota1);
+        console.log(nota1);
+
+        let nota2 = prompt("Digite a primeira nota: ");
+        nota2 = parseFloat(nota2);
+        console.log(nota2);
+
+        let media = (nota1 + nota2) / 2;
+
+        if (media >= 6) {
+            alert(`O aluno foi aprovado! Media de ${media}`);
+        } else {
+            alert(`O aluno foi reprovado! Media de ${media}`);
+        }
+    </script>
+</body>
+</html>

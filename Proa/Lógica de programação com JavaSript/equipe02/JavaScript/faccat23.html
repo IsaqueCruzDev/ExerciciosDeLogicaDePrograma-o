@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Tendo como dados de entrada o nome, a altura e o sexo (M ou F) de uma pessoa, calcule e mostre seu peso ideal, utilizando as seguintes fórmulas: 
+        - para sexo masculino:  peso ideal = (72.7 * altura) - 58 
+        - para sexo feminino:  peso ideal = (62.1 * altura) - 44.7  -->
+        <button type="button" onclick="calculaPeso()">Clique aqui</button>
+        <script>
+            function calculaPeso() {
+                let altura = parseFloat(prompt("Digite a sua altura"));
+                let sexo = prompt("Digite o seu sexo. M  ou F:");
+                let pesoIdeal;
+                if (sexo === 'M' || sexo === 'm' || sexo === 'masculino' || sexo === 'homem') {
+                    pesoIdeal = (72.7 * altura) - 58;
+                    alert(`O seu peso ideal é de: ${pesoIdeal}`);
+                } else if (sexo === 'F' || sexo === 'f' || sexo === 'feminino' || sexo === 'mulher') {
+                    pesoIdeal = (62.1 * altura) - 44.7;
+                    alert(`O seu peso ideal é de: ${pesoIdeal}`);
+                }
+            }
+            
+        </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Elaborar  um  programa  que  efetue  a  leitura  de  valores  positivos  inteiros  até  que  um  valor  negativo seja  informado.  Ao  final  devem  ser  apresentados  o  maior  e  o  menor  valores  informados  pelo usuário. -->
+    <button type="button" onclick="executaFuncao()">Clique em mim</button>
+    <script>
+      function executaFuncao() {
+        let contador = 0;
+        let contadorCondicao = 1;
+        while (contador < contadorCondicao) {
+            contador = contador + 1;
+            let numero = parseInt(prompt("Digite um número:"));
+            console.log(numero);
+            if (numero >= 0) {
+                contadorCondicao = contadorCondicao + 1;
+            } else {
+                alert("Terminou a repeticao.");
+            }
+        }
+      }
+    </script>
+  </body>
+</html>
